@@ -1,6 +1,6 @@
 import pygst
 import gst
-#Test
+#Test 2
 def on_tag(bus, msg):
     taglist = msg.parse_tag()
     print 'on_tag:'
