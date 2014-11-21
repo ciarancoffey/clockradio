@@ -1,6 +1,3 @@
-http://icecast2.rte.ie/radio1
-
-
 import pygst
 import gst
 
