@@ -9,6 +9,7 @@ def on_tag(bus, msg):
 
 #our stream to play
 music_stream_uri = 'http://icecast2.rte.ie/radio1'
+music_stream_uri = ' '
 
 #creates a playbin (plays media form an uri) 
 player = gst.element_factory_make("playbin", "player")
@@ -26,7 +27,7 @@ bus.add_signal_watch()
 bus.connect('message::tag', on_tag)
 
 #wait and let the music play
-raw_input('Press enter to stop playing...')
+#raw_input('Press enter to stop playing...')
 
 def play():
     player.set_state(gst.STATE_PLAYING)
@@ -44,4 +45,4 @@ def play_new_uri( new_uri ):
     play()
 
 
-play_new_uri( 'http://pri.gocaster.net/td' )
+#play_new_uri( 'http://pri.gocaster.net/td' )
